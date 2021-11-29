@@ -1,0 +1,61 @@
+[build-system]
+requires = [ "whey",]
+build-backend = "whey"
+
+[project]
+name = "circuitpython_latching_relay"
+version = "0.0.0"
+description = "CircuitPython library for controlling latching relays."
+readme = "README.rst"
+requires-python = ">=3.4"
+keywords = [ "circuitpython", "relay",]
+dynamic = [ "classifiers", "dependencies",]
+
+[[project.authors]]
+name = "Dominic Davis-Foster"
+email = "dominic@davis-foster.co.uk"
+
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Homepage = "https://github.com/domdfcoding/circuitpython_latching_relay"
+"Issue Tracker" = "https://github.com/domdfcoding/circuitpython_latching_relay/issues"
+"Source Code" = "https://github.com/domdfcoding/circuitpython_latching_relay"
+
+[tool.whey]
+base-classifiers = [ "Typing :: Typed",]
+python-versions = [ "3.6",]
+python-implementations = [ "CPython",]
+platforms = [ "Windows", "macOS", "Linux",]
+license-key = "MIT"
+
+[tool.importcheck]
+
+[tool.mypy]
+python_version = "3.6"
+namespace_packages = true
+check_untyped_defs = true
+warn_unused_ignores = true
+no_implicit_optional = true
+show_error_codes = true
+
+[tool.snippet-fmt]
+directives = [ "code-block",]
+
+[tool.dep_checker]
+allowed_unused = [ "adafruit_blinka",]
+
+[tool.dependency-dash."requirements.txt"]
+order = 10
+
+[tool.snippet-fmt.languages.python]
+reformat = true
+
+[tool.snippet-fmt.languages.TOML]
+reformat = true
+
+[tool.snippet-fmt.languages.ini]
+
+[tool.snippet-fmt.languages.json]
