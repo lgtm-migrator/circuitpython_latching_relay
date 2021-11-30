@@ -46,20 +46,40 @@ class LatchingRelay:
 
 	:param on_pin: The pin which will turn the relay on when set high.
 	:param off_pin: The pin which will turn the relay off when set high.
+	:param initial_value: The initial state to set the relay to (:py:obj:`True` = On).
 	"""
 
-	def __init__(self, on_pin: Pin, off_pin: Pin):
+	def __init__(self, on_pin: Pin, off_pin: Pin, initial_value: bool = False):
 		self._on = digitalio.DigitalInOut(on_pin)
 		self._on.switch_to_output()
 
 		self._off = digitalio.DigitalInOut(off_pin)
 		self._off.switch_to_output()
 
+		if initial_value:
+			self.turn_on()
+		else:
+			self.turn_off()
+
+	@property
+	def value(self) -> bool:
+		return self._value
+
+	@value.setter
+	def value(self, value: bool):
+		if value and not self._value:
+			self.turn_on()
+		elif not value and self._value:
+			self.turn_off()
+
+		self._value = value
+
 	def turn_on(self) -> None:
 		"""
 		Turn the relay on.
 		"""
 
+		self._value = True
 		self._off.value = False
 		self._on.value = True
 		time.sleep(0.01)
@@ -70,6 +90,7 @@ class LatchingRelay:
 		Turn the relay off.
 		"""
 
+		self._value = True
 		self._on.value = False
 		self._off.value = True
 		time.sleep(0.01)
