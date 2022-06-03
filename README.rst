@@ -67,7 +67,7 @@ circuitpython_latching_relay
 	:target: https://github.com/domdfcoding/circuitpython_latching_relay/commit/master
 	:alt: GitHub last commit
 
-.. |maintained| image:: https://img.shields.io/maintenance/yes/2021
+.. |maintained| image:: https://img.shields.io/maintenance/yes/2022
 	:alt: Maintenance
 
 .. end shields
