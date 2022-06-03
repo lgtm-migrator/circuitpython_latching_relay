@@ -82,7 +82,7 @@ class LatchingRelay:
 		self._value = True
 		self._off.value = False
 		self._on.value = True
-		time.sleep(0.01)
+		time.sleep(0.02)
 		self._on.value = False
 
 	def turn_off(self) -> None:
@@ -93,5 +93,5 @@ class LatchingRelay:
 		self._value = True
 		self._on.value = False
 		self._off.value = True
-		time.sleep(0.01)
+		time.sleep(0.02)
 		self._off.value = False
