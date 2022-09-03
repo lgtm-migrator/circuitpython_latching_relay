@@ -44,8 +44,8 @@ circuitpython_latching_relay
 	:target: https://github.com/domdfcoding/circuitpython_latching_relay/actions?query=workflow%3A%22mypy%22
 	:alt: mypy status
 
-.. |requires| image:: https://dependency-dash.herokuapp.com/github/domdfcoding/circuitpython_latching_relay/badge.svg
-	:target: https://dependency-dash.herokuapp.com/github/domdfcoding/circuitpython_latching_relay/
+.. |requires| image:: https://dependency-dash.repo-helper.uk/github/domdfcoding/circuitpython_latching_relay/badge.svg
+	:target: https://dependency-dash.repo-helper.uk/github/domdfcoding/circuitpython_latching_relay/
 	:alt: Requirements Status
 
 .. |codefactor| image:: https://img.shields.io/codefactor/grade/github/domdfcoding/circuitpython_latching_relay?logo=codefactor
